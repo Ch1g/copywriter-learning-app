@@ -14,8 +14,6 @@ services:
   web:
     image: copywriter-learning-app:latest
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"
-    volumes:
-      - ..:/rails
     ports:
       - "3000:3000"
     depends_on:
