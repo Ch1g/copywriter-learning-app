@@ -24,7 +24,10 @@ services:
       - db
     environment:
       RAILS_ENV: production
-      DATABASE_URL: postgres://myapp:password@db/myapp_development
+      DATABASE_URL: postgres://copywriter_learning_app:copywriter_learning_password@db/copywriter_learning_app_production
+      POSTGRES_DB: copywriter_learning_app_production
+      POSTGRES_USER: copywriter_learning_app
+      POSTGRES_PASSWORD: copywriter_learning_password
 
 volumes:
   postgres_data:
