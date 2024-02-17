@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <div class="mb-3">
+    <small class="text-muted">Модуль: <%= @lesson.course_module.name %></small>
+    <h3 class="mb-2 text-dark"><%= @lesson.name %></h3>
+    <p class="text-dark"><%= @lesson.content %></p>
+  </div>
+
+  <h4 class="mt-4 mb-2 text-dark">Материалы</h3>
+  <%= render partial: "resources/resource", collection: @lesson.resources, as: :resource %>
+
+  <h4 class="mt-4 mb-2 text-dark">Задания</h3>
+  <%= render partial: "tasks/task", collection: @lesson.tasks, as: :task %>
+</div>
+
+<%= render partial: "lessons/navigation", locals: { previous_lesson: @previous_lesson, next_lesson: @next_lesson } %>

@@ -1,0 +1,16 @@
+<!-- app/views/course_modules/show.html.erb -->
+<div class="container mt-4">
+  <h2 class="mb-3 text-center" style="color: black;"><%= @course_module.name %></h2>
+  <ul class="list-unstyled">
+    <% @course_module.lessons.each do |lesson| %>
+      <li class="mb-2">
+        <a href="<%= lesson_path(lesson) %>" class="text-decoration-none" style="color: black;">
+          <div class="p-2 border border-dark rounded" style="background-color: white;">
+            <h5 class="mb-1"><%= lesson.name %></h5>
+            <p class="mb-0 text-muted" style="font-size: 0.9em;"><%= lesson.content %></p>
+          </div>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

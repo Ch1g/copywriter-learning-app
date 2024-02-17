@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between my-4">
+  <div>
+    <% if previous_lesson %>
+      <%= link_to 'Предыдущий урок', lesson_path(previous_lesson), class: "btn btn-outline-secondary" %>
+    <% end %>
+  </div>
+  <div>
+    <% if next_lesson %>
+      <%= link_to 'Следующий урок', lesson_path(next_lesson), class: "btn btn-outline-secondary" %>
+    <% end %>
+  </div>
+</div>

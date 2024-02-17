@@ -1,0 +1,9 @@
+<div class="p-2 border border-dark rounded mt-2" style="background-color: white;">
+  <h5 class="mb-1 text-dark"><%= resource.name %></h5>
+  <% if resource.content.present? %>
+    <p class="text-dark"><%= resource.content %></p>
+  <% end %>
+  <% if resource.url.present? %>
+    <%= link_to "Перейти", resource.url, class: "text-dark" %>
+  <% end %>
+</div>
