@@ -28,7 +28,7 @@ services:
       POSTGRES_USER: copywriter_learning_app
       POSTGRES_PASSWORD: copywriter_learning_password
 
-      RAILS_MASTER_KEY: wiry-affront-fabric-mourner-yearling-skipper-contort-esquire
+      RAILS_MASTER_KEY: mAGQgORpA4MFucjQnQRUyzl6zk0PjzqO
 
 volumes:
   postgres_data:
