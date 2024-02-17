@@ -29,5 +29,7 @@ services:
       POSTGRES_USER: copywriter_learning_app
       POSTGRES_PASSWORD: copywriter_learning_password
 
+      RAILS_MASTER_KEY: opulently-unhook-engorge-doorframe-barbell-tall-panther-dispose
+
 volumes:
   postgres_data:

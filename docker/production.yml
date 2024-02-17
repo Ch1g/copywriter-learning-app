@@ -14,16 +14,21 @@ services:
   web:
     image: copywriter-learning-app:latest
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"
+    volumes:
+      - ../config:/rails/config
     ports:
       - "3000:3000"
     depends_on:
       - db
     environment:
       RAILS_ENV: production
+
       DATABASE_URL: postgres://copywriter_learning_app:copywriter_learning_password@db/copywriter_learning_app_production
       POSTGRES_DB: copywriter_learning_app_production
       POSTGRES_USER: copywriter_learning_app
       POSTGRES_PASSWORD: copywriter_learning_password
+
+      RAILS_MASTER_KEY: wiry-affront-fabric-mourner-yearling-skipper-contort-esquire
 
 volumes:
   postgres_data:
