@@ -4,6 +4,7 @@ services:
     image: postgres:latest
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
     environment:
       POSTGRES_DB: copywriter_learning_app_production
       POSTGRES_USER: copywriter_learning_app
@@ -20,6 +21,7 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    restart: unless-stopped
     environment:
       RAILS_ENV: production
 
